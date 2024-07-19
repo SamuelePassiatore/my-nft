@@ -26,7 +26,7 @@ contract MyNFT is
     function unpause() public onlyOwner {
         _unpause();
     }
-
+    //Safe mint
     function safeMint(address to, string memory uri) public {
         uint256 tokenId = _nextTokenId++;
         _safeMint(to, tokenId);
